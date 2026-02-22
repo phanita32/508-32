@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Text Animation - Phanita</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a0000, #330000);
+            font-family: 'Sarabun', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        /* ชื่อ */
+        .name-text {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #ff1a1a;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: bounceUp 1.5s ease-out forwards;
+        }
+
+        /* Soft Skill */
+        .skill-text {
+            font-size: 1.8rem;
+            color: #ff4d4d;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: glowFade 2s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        /* เด้งขึ้นจากล่าง */
+        @keyframes bounceUp {
+            0% {
+                transform: translateY(150px) scale(0.8);
+                opacity: 0;
+            }
+            60% {
+                transform: translateY(-20px) scale(1.1);
+                opacity: 1;
+            }
+            80% {
+                transform: translateY(10px) scale(0.95);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* เรืองแสงแดง + ค่อยๆ ชัด */
+        @keyframes glowFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                text-shadow: 
+                    0 0 10px #ff0000,
+                    0 0 20px #ff0000,
+                    0 0 40px #ff3333;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="name-text">น.ส.ภณิตา พึ่งใจ</div>
+        <div class="skill-text">Soft Skill: Creative Thinker & Fast Learner</div>
+    </div>
+
+</body>
+</html>
