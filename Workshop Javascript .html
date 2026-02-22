@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เว็บสุ่มคำคม</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff4d4d, #990000);
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        .box {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            color: #990000;
+            margin-bottom: 20px;
+        }
+
+        #quote {
+            font-size: 18px;
+            margin: 20px 0;
+            min-height: 60px;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 16px;
+            background: #ff1a1a;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #cc0000;
+        }
+
+        .fade {
+            animation: fadeEffect 0.5s ease-in-out;
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>สุ่มคำคมประจำวัน 💬</h2>
+
+        <div id="quote">กดปุ่มเพื่อสุ่มคำคม</div>
+
+        <button onclick="randomQuote()">สุ่มคำคม</button>
+    </div>
+
+<script>
+    let quotes = [
+        "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น",
+        "ล้มได้ แต่อย่าหยุด",
+        "อย่ากลัวที่จะเริ่มใหม่",
+        "วันนี้เหนื่อยได้ แต่ห้ามยอมแพ้",
+        "ความฝันไม่มีวันหมดอายุ",
+        "ทำวันนี้ให้ดีที่สุด",
+        "ความผิดพลาดคือบทเรียน",
+        "อย่าเปรียบเทียบตัวเองกับใคร"
+    ];
+
+    function randomQuote() {
+        let randomIndex = Math.floor(Math.random() * quotes.length);
+        let quoteText = document.getElementById("quote");
+
+        quoteText.classList.remove("fade");
+        void quoteText.offsetWidth; 
+        quoteText.classList.add("fade");
+
+        quoteText.innerHTML = quotes[randomIndex];
+    }
+</script>
+
+</body>
+</html>
