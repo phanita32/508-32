@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio - ภณิตา</title>
+
+<style>
+body {
+    font-family: Tahoma, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.profile-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-container img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-card {
+    border: 2px solid #4a6cff;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.timetable-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+footer {
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="#about">ประวัติส่วนตัว</a></li>
+<li><a href="#gallery">คลังรูปภาพ</a></li>
+<li><a href="#contact">ติดต่อ</a></li>
+<li><a href="#timetable">ตารางเรียน</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="about">
+<h2 class="center">ประวัติส่วนตัวของเรา</h2>
+<div class="profile-container">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__75735046_0.jpg" alt="รูปนักเรียน">
+    <div>
+        <p><strong>ชื่อ-สกุล:</strong> น.ส.ภณิตา พึ่งใจ</p>
+        <p><strong>การศึกษา:</strong> เรียนอยู่ระดับชั้นมัธยมศึกษาปีที่5 โรงเรียนบางปะกอกวิทยาคม</p>
+        <p><strong>อาหารที่ชอบ:</strong> 1. พิซซ่า 2. ไก่ทอด 3. หอยทอด</p>
+        <p><strong>ไม่ชอบอะไร:</strong> 1. สิ่งที่สกปรก 2. อากาศร้อน</p>
+        <p><strong>ทำไมถึงเลือกเรียนเทคโนโลยี:</strong> 1. ชอบคอมพิวเตอร์ 2. อยากเขียนเว็บ 3. อยากทำเกม</p>
+        <p><strong>ความรู้พื้นฐานการพัฒนาเว็บ:</strong> 1. HTML 2. CSS 3. Python</p>
+        <p><strong>อยากเข้าศึกษาต่อคณะ:</strong> คณะดิจิทัลมีเดีย (สาขาดิจิทัลอาร์ตส์)</p>
+    </div>
+</div>
+</section>
+
+<section id="gallery">
+<h2 class="center">คลังรูปภาพ</h2>
+<div class="gallery">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__14647303_0.jpg">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__14647304_0.jpg">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__75735043.jpg">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__75735044_0.jpg">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__75735047_0.jpg">
+    <img src="C:\Users\supak\Desktop\รูปฉัน\S__75735050_0.jpg">
+</div>
+</section>
+
+<section id="contact">
+<h2 class="center">ติดต่อเรา</h2>
+<div class="contact-container">
+    <div class="contact-card">
+        <p>📞 โทรศัพท์</p>
+        <p>083-887-2478</p>
+    </div>
+    <div class="contact-card">
+        <p>🔵 Facebook</p>
+        <a href="https://www.facebook.com/ThaiNewsSamplePage" target="_blank">ไปยัง Facebook</a>
+    </div>
+    <div class="contact-card">
+        <p>📸 Instagram</p>
+        <a href="https://www.instagram.com/space.news.demo" target="_blank">ไปยัง Instagram</a>
+    </div>
+</div>
+</section>
+
+<section id="timetable">
+<h2 class="center">ตารางเรียน</h2>
+<img src="C:\Users\supak\Desktop\รูปฉัน\S__14647305.jpg" class="timetable-img">
+</section>
+
+<footer>
+<p>ผู้พัฒนา: น.ส.ภณิตา พึ่งใจ</p>
+</footer>
+
+</body>
+</html>
